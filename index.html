@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFHL Hierarchy Processor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hierarchy API Processor</h1>
+            <p>Enter edges formatting as <code>X->Y</code> (e.g. <code>A->B</code>)</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="edges-input" placeholder='["A->B", "A->C", "B->D"]' rows="5"></textarea>
+                <button id="submit-btn" type="button">Process Hierarchy</button>
+            </div>
+            
+            <div class="output-section">
+                <h2>Output</h2>
+                <div id="loading" class="hidden">Processing...</div>
+                <div id="error" class="hidden error-msg"></div>
+                <pre id="json-output"></pre>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
